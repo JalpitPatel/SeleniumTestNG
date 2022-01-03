@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RegressionSuite" thread-count="3" parallel="classes">
+	<listeners>
+		<listener class-name="com.selenium.utils.TestListner" />
+	</listeners>
+	
+	<parameter name="msg" value="Hello Team" />
+	<parameter name="result" value="Success - Check box is checked" />
+	<parameter name="country" value="India" />
+	
+	<test name="Testing">
+		<groups>
+			<run>
+				<include name="Web Controls Test" />
+				<include name="Functionality"/>
+			</run>
+		</groups>
+		
+		<classes>
+			<class name="com.selenium.test.InputFormTest"></class>
+		</classes>
+	</test>
+</suite>

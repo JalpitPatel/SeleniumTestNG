@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="classes" name="Failed suite [RegressionSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="msg" value="Hello Team"/>
+  <parameter name="result" value="Success - Check box is checked"/>
+  <parameter name="country" value="India"/>
+  <listeners>
+    <listener class-name="com.selenium.utils.TestListner"/>
+  </listeners>
+  <test thread-count="3" parallel="classes" name="Testing(failed)">
+    <classes>
+      <class name="com.selenium.test.InputFormTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="setUp"/>
+          <include name="TC002_testCheckboxDemo" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.selenium.test.InputFormTest -->
+    </classes>
+  </test> <!-- Testing(failed) -->
+</suite> <!-- Failed suite [RegressionSuite] -->
